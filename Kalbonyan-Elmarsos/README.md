@@ -35,6 +35,7 @@
     - [x] ![#0D64C3](https://via.placeholder.com/12/0D64C3/000000?text=+) ` Done` ` 2h 55m 49s` - 10 - [Git Essential Training: The Basics](Linkedin-Learning/Git-Essential-Training-The-Basics/)
     - [x] ![#0D64C3](https://via.placeholder.com/12/0D64C3/000000?text=+) ` Done` ` 2h 45m 37s` - 11 -[HTML Essential Training](Linkedin-Learning/Html-Essential-Training/)
     - [x] ![#0D64C3](https://via.placeholder.com/12/0D64C3/000000?text=+) ` Done` ` 4h 29m 7s` - 12- [CSS Essential Training](Linkedin-Learning/CSS-Essential-Training/)
+    - [x] ![#0D64C3](https://via.placeholder.com/12/0D64C3/000000?text=+) ` Done` ` 4h 29m 7s` - 13- [First-Portofolio-Html-Css](https://github.com/karimadel88/First-Portofolio-Html-Css)
     <br />
 
 <img src="https://img.shields.io/badge/Total%20Number%20Of%20Hours%20For%20This%20Courses-24h27m-blue">
