@@ -11,12 +11,6 @@ const notes = [{}, {
 }
 ]
 
-const findNote = function(notes, noteTitle) {
-    return notes.find(function(note, index){
-        return note.title === noteTitle
-    })
-}
-
 const findNotes = function (notes, query) {
     return notes.filter(function (note, index) {
         // return true  // All notes array
@@ -29,8 +23,6 @@ const findNotes = function (notes, query) {
     
 
 }
-
-
 
 console.log(findNotes(notes,'ne'))
 
