@@ -17,18 +17,21 @@ const findNote = function(notes, noteTitle) {
     })
 }
 
-const filteredNotes = notes.filter(function (note, index) {
-    // return true  // All notes array
-    // return false // [] nothing
-    const isTitleMatch = note.title.toLowerCase().includes('ne')
-    const isBodyMatch = note.body.toLowerCase().includes('ne')
-    return (isTitleMatch || isBodyMatch)
+const findNotes = function (notes, query) {
+    return notes.filter(function (note, index) {
+        // return true  // All notes array
+        // return false // [] nothing
+        const isTitleMatch = note.title.includes(query)
+        const isBodyMatch = note.body.includes(query)
+        return (isTitleMatch || isBodyMatch)
+    }
+    )
+    
+
 }
-)
-
-console.log(filteredNotes)
 
 
-console.log(findNote(notes,'Habbits to work on'))
+
+console.log(findNotes(notes,'ne'))
 
 
