@@ -1,7 +1,5 @@
 /**
- * Listen for new todo creation
- * 
- * 
+ * add eventListener for new todo creation
  */
 
 let todos = [{
