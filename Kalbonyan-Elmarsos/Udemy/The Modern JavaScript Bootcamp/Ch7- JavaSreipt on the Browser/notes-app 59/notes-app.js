@@ -52,6 +52,9 @@ const notes = [{
     document.querySelector('#for-fun').addEventListener('change', function (e) {
         console.log(e.target.checked)
     })
+    document.querySelector('#filter-by').addEventListener('change', function (e) {
+        console.log(e.target.value)
+    })
 // document.querySelector('#remove-all').addEventListener('click',function(){
 //     console.log('Delete all notes')
 //     document.querySelectorAll('.note').forEach(function(note){
