@@ -23,7 +23,7 @@ const generateNoteDom = function (note) {
     const button = document.createElement('button')
 
     // Setup the remove note button
-    button.textContent = 'x'
+    button.textContent = 'x  '
     noteEl.appendChild(button)
 
     // Setup the note title text
