@@ -10,7 +10,7 @@ document.querySelector('#create-note').addEventListener('click', function (e) {
         title:'',
         body:''
     })
-    sitNotes('notes',notes)
+    setNotes('notes',notes)
     renderNotes(notes,filters)
 })
     

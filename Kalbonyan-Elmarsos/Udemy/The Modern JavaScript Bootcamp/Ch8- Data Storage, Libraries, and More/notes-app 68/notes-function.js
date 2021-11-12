@@ -11,7 +11,7 @@ const getSavedNotes = function () {
 }
 
 // Saved notes to storage
-const sitNotes =function(key,item){
+const setNotes =function(key,item){
     localStorage.setItem('notes',JSON.stringify(notes))
 }
 
@@ -23,7 +23,7 @@ const generateNoteDom = function (note) {
     const button = document.createElement('button')
 
     // Setup the remove note button
-    button.textContent = 'x  '
+    button.textContent = 'x'
     noteEl.appendChild(button)
 
     // Setup the note title text
