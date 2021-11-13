@@ -27,14 +27,14 @@ const toggleTodo = function (id) {
     })
 
     if (todo !== undefined){
-        todo.completed = false
+        todo.completed = !todo.completed
     }
 }
 
 // Remove by id
 const removeTodo = function(id){
-    const todoIndex = todos.findIndex(function(note){
-        return note.id === id
+    const todoIndex = todos.findIndex(function(todo){
+        return todo.id === id
     })
 
     if(todoIndex > -1){
