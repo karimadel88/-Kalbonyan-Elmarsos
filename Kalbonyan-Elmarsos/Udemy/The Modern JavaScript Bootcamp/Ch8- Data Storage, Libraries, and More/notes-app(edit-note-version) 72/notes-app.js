@@ -1,8 +1,4 @@
-/**
- * 1. Setup link href to inclde hash with id
- * 2. Setup the assign cell to inclde hash with id
- */
-
+// Store note
 const notes = getSavedNotes()
 
 const filters = {
@@ -16,7 +12,7 @@ document.querySelector('#create-note').addEventListener('click', function (e) {
         title:'',
         body:''
     })
-    location.assign(`edit-note.html${id}`)
+    location.assign(`edit-note.html#${id}`)
     setNotes('notes',notes)
 })
     
@@ -28,4 +24,5 @@ document.querySelector('#search-text').addEventListener('input', function (e) {
 document.querySelector('#filter-by').addEventListener('change', function (e) {
     console.log(e.target.value)
 })
+
 
