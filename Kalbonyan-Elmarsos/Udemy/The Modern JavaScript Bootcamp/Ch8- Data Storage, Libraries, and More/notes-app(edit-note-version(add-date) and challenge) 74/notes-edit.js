@@ -51,12 +51,30 @@ window.addEventListener('storage',function(e){
         }
     }
 })
-
+// Unix Epoch - january 1st 2000 00:00:00
 const now = new Date()
 const timestamp = now.getTime()
-
 const myDate = new Date(timestamp);
 console.log(myDate.getFullYear)
+
+// Soultion
+const date1 = new Date('May 5 2016 11:00:00')
+const date2 = new Date()
+const date1Timestamp = date1.getTime()
+const date2Timestamp = date1.getTime()
+
+if (date1Timestamp < date2Timestamp) {
+    console.log(date1.toString())
+}else if (date2Timestamp < date1Timestamp) {
+    console.log(date2.toString())
+}
+
+
+// const now = new Date()
+// const timestamp = now.getTime()
+
+// const myDate = new Date(timestamp);
+// console.log(myDate.getFullYear)
 
 // Unix Epoch - january 1st 2000 00:00:00
 // const now = new Date()
@@ -66,3 +84,4 @@ console.log(myDate.getFullYear)
 // console.log(`Hours : ${now.getHours()}`)
 // console.log(`Minutes : ${now.getMinutes()}`)
 // console.log(`Seconds : ${now.getSeconds()}`)
+
