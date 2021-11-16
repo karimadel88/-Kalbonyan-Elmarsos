@@ -7,12 +7,7 @@
 // Read exicting todos from localStorage
 const getSavedTodos =  () => {
     const todosJSON = localStorage.getItem('todos')
-    try{
-        return (todosJSON !== null) ?  (JSON.parse(todosJSON)) : []
-    }catch (e){
-        return []
-    }
-
+    return (todosJSON) ?  (JSON.parse(todosJSON)) : []
 }
 
 // Save Todos
@@ -22,11 +17,11 @@ const saveTodos = (todos) => {
 
 // Toggle Todo
 const toggleTodo = (id) =>{
-    const todo = todos.find(function(todo){
+    const todo = todos.find((todo) => {
         return todo.id === id
     })
 
-    if (todo !== undefined){
+    if (todo){
         todo.completed = !todo.completed
     }
 }
@@ -44,7 +39,7 @@ const removeTodo = (id) => {
 
 // Render todos app
 const renderTodo =  (todos, filters) => {
-    const filteredTodos = todos.filter(function (todo) {
+    const filteredTodos = todos.filter((todo) => {
         const searchTextMatch = todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
         const hideCompletedMatch = !filters.hideCompleted || !todo.completed
 
