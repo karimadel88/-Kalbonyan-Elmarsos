@@ -1,20 +1,27 @@
-// Product --> Object.prototype --> null
+// Primitive value : String, number, boolean, null, undefined
 
-// const product = {
-//     name : 'Influence'
-// }
+// Object : myObject --> Object.prototype --> null
+// Array : myArray --> Array.prototype --> Object.prototype --> null
+// Function : myFunction --> Function.prototype --> Object.prototype --> null
+// String : myString --> String.prototype --> object.prototype --> null
+// Number : myNumber --> Number.prototype --> object.prototype --> null
+// Boolean : myNumber --> Boolean.prototype --> object.prototype --> null
 
-// Other way to define object
-const product = new Object()
-product.name = 'Influence'
 
-// Third wat
-const product = new Object({
-    name : 'Influence'
-})
 
-// Can override method of prototype
-Object.prototype.hasOwnProperty = () => 'This is new function'
 
-// hasOwnProperty return true or false
-console.log(product.hasOwnProperty('name')) // true
+// const team = ['p1','p2']
+
+// const team = new Array(['p1','p2'])
+// console.log(team)
+
+// const getScore = () => 1
+// console.log(getScore)
+
+const product = 'Computer'      // This is a value
+console.log(product)
+const p2 = product.split('')    // Convert to array
+console.log(p2)
+
+const otherProduct = new String('phone')
+console.log(otherProduct)
