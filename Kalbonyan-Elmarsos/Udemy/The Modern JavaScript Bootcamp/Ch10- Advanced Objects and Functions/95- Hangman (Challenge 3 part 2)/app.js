@@ -1,27 +1,56 @@
-// Primitive value : String, number, boolean, null, undefined
-
-// Object : myObject --> Object.prototype --> null
-// Array : myArray --> Array.prototype --> Object.prototype --> null
-// Function : myFunction --> Function.prototype --> Object.prototype --> null
-// String : myString --> String.prototype --> object.prototype --> null
-// Number : myNumber --> Number.prototype --> object.prototype --> null
-// Boolean : myNumber --> Boolean.prototype --> object.prototype --> null
+/**
+ * 1. Create a method for making a guess
+ * 1. Should accept a character for making a guess
+ * 2. Should add unique guesses to list of guesses
+ * 3. Should decrement the guesses left if a unique guess isn't match
+ */
 
 
+const Hangman = function (word, remainingGuesses){
+    this.word = word.toLowerCase().split('')
+    this.remainingGuesses = remainingGuesses
+    this.gussedLetters = []
+}
 
+Hangman.prototype.getPuzzel = function(){
+    let puzzle = ''
+    this.word.forEach(letter => {
+        if (this.gussedLetters.includes(letter) || letter ===' '){
+            puzzle += letter
+        }else{
+            puzzle += '*'
+        }
+    });
+    return puzzle
+}
 
-// const team = ['p1','p2']
+// Function to take guess
+Hangman.prototype.makeGuess = function (guess){
+    const isUnique = this.gussedLetters.includes(guess)
+    const isBadGuess = this.word.includes(guess)
 
-// const team = new Array(['p1','p2'])
-// console.log(team)
+    if(!isUnique)
+        this.gussedLetters.push(guess)
+    
+    if(!isUnique && isBadGuess)
+        this.remainingGuesses --
+}
 
-// const getScore = () => 1
-// console.log(getScore)
+const g1 = new Hangman('cat',2)
 
-const product = 'Computer'      // This is a value
-console.log(product)
-const p2 = product.split('')    // Convert to array
-console.log(p2)
+// Guess c, t,z
+// g1.makeGuess('c')
+// g1.makeGuess('t')
+// g1.makeGuess('z')
+// print remaining guesses
+console.log(g1.getPuzzel())
+console.log(g1.remainingGuesses)
 
-const otherProduct = new String('phone')
-console.log(otherProduct)
+window.addEventListener('keypress', function (e) {
+    const guess = String.fromCharCode(e.charCode)
+    g1.makeGuess(guess)
+    console.log(g1.getPuzzel())
+    console.log(g1.remainingGuesses)
+    
+
+})
