@@ -17,11 +17,15 @@ class Person {
         return bio
     }
 
-    setName(fullName){
+    set fullName(fullName){
         const names = fullName.split(' ')
         this.firstName = names[0]
         this.lastName = names[1]
-    }    
+    }  
+    
+    get fullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
 }
 
 // This class inharite from person class
@@ -32,7 +36,7 @@ class Employee extends Person {
     }
     
     getBio(){
-        return `${this.firstName} is a ${this.position}`
+        return `${this.fullName} is a ${this.position}`
     }
 
     getYearsLeft(){
@@ -41,6 +45,7 @@ class Employee extends Person {
 }
 
 const p1 = new Employee('Shwaky','omar',22,['football','Reading'],'Engineer')
+p1.fullName = 'Karim Adel'
 console.log(p1.getBio())
 console.log(p1.getYearsLeft())
 
