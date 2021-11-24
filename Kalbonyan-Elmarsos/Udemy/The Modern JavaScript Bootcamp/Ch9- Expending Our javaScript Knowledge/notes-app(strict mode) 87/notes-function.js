@@ -1,6 +1,8 @@
 'use strict'
 // console.log(uuidv4())
 // Read exicting notes from localStorage
+const timpstamp = moment().valueOf()
+
 const getSavedNotes = () => {
     const notesJSON = localStorage.getItem('notes')
     try{

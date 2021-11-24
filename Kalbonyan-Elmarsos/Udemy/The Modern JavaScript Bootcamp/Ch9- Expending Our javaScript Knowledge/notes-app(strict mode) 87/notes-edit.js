@@ -4,6 +4,7 @@ const bodyEl = document.querySelector('#note-body')
 const removeEl = document.querySelector('#remove-note')
 // const dateElement = document.querySelector('#last-edited')
 const noteId = location.hash.substring(1)
+const updateDate   = (note) => {note.updatedAt = timpstamp}
 
 const notes = getSavedNotes()
 const note = notes.find((note) =>{
@@ -16,19 +17,19 @@ if(!note){
 
 titleEl.value = note.title
 bodyEl.value = note.body
-// dateElement.textContent = generateLastEdited(note.updatedAt)
+dateElement.textContent = generateLastEdited(note.updatedAt)
 
 titleEl.addEventListener('input',(e)=>{
     note.title = e.target.value
-    // note.updatedAt = moment().valueOf()
-    // dateElement.textContent = generateLastEdited(note.updatedAt)
+    updateDate(note)
+    dateElement.textContent = generateLastEdited(note.updatedAt)
     setNotes(notes)
 })
 
 bodyEl.addEventListener('input',(e) => {
     note.body = e.target.value
-    // note.updatedAt = moment().valueOf()
-    // dateElement.textContent = generateLastEdited(note.updatedAt)
+    updateDate(note)
+    dateElement.textContent = generateLastEdited(note.updatedAt)
     setNotes(notes)
 })
 
@@ -48,6 +49,6 @@ window.addEventListener('storage',(e) =>{
         
         titleEl.value = note.title
         bodyEl.value = note.body
-        // dateElement.textContent = generateLastEdited(note.updatedAt)
+        dateElement.textContent = generateLastEdited(note.updatedAt)
     }
 })
