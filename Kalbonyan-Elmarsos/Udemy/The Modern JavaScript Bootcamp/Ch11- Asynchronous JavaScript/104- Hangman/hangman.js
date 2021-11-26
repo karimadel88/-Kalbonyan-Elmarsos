@@ -1,3 +1,7 @@
+// Http request
+// Request - What do we want to do
+// Responce - What was actully done
+
 class Hangman{
     constructor(word, remainingGuesses) {
         this.word = word.toLowerCase().split('')
