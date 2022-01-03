@@ -8,12 +8,14 @@ const filters = {
 
 renderTodo(todos, filters)
 
+// Search-text
 document.querySelector('#search-text').addEventListener('input',  (e) => {
     filters.searchText = e.target.value
     // Render after take text to filter
     renderTodo(todos, filters)
 })
 
+// add new todo
 document.querySelector('#new-todo').addEventListener('submit',  (e) => {
     e.preventDefault()
     todos.push({

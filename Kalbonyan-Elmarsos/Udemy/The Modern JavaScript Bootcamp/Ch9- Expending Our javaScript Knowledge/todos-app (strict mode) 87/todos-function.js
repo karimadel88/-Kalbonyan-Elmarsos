@@ -48,6 +48,7 @@ const renderTodo =  (todos, filters) => {
 
     document.querySelector('#todos').innerHTML = ''
     document.querySelector('#todos').appendChild(generetSummery(filteredTodos))
+
     filteredTodos.forEach(function (todo) {
         document.querySelector('#todos').appendChild(generateToDoDom(todo))
     })
@@ -85,7 +86,6 @@ const generateToDoDom = (todo) => {
     })
 
     return todoEl
-
 
 }
 
