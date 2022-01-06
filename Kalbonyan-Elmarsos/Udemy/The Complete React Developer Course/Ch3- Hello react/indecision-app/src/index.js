@@ -61,7 +61,7 @@ const renderIndecisionApp = () =>{
               </ol>
               <form onSubmit={onFormSubmit}>
                 <input type='text' name='option' />
-                <button >Add Option</button>
+                <button >A?dd Option</button>
               </form>
           </div>
     );
@@ -71,3 +71,4 @@ const renderIndecisionApp = () =>{
 }
 
 renderIndecisionApp();
+
